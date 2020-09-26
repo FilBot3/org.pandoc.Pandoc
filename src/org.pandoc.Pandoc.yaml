@@ -1,0 +1,29 @@
+---
+app-id: org.pandoc.Pandoc
+command: start.sh
+runtime: org.freedesktop.Platform
+runtime-version: '20.08'
+sdk: org.freedesktop.Sdk
+finish-args:
+  - '--share=network'
+  - '--filesystem=home:create'
+modules:
+  - name: pandoc
+    sources:
+      - type: script
+        dest-filename: start.sh
+        commands:
+          - exec /app/pandoc/bin/pandoc $@
+      - type: file
+        path: org.pandoc.Pandoc.appdata.xml
+      - type: archive
+        archive-type: tar-gzip
+        url: https://github.com/jgm/pandoc/releases/download/2.10.1/pandoc-2.10.1-linux-amd64.tar.gz
+        sha256: a3ab481ad53f5568d7ec5263fbdd3478fb320d13b5d61a92fb5cee410186bd86
+    buildsystem: simple
+    build-commands:
+      - mv pandoc /app/pandoc
+    post-install:
+      - install -D -m 644 org.pandoc.Pandoc.appdata.xml /app/share/metainfo/org.pandoc.Pandoc.appdata.xml
+      - install -D -m 755 start.sh /app/bin/start.sh
+...

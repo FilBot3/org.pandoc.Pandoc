@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+	<id>org.pandoc.Pandoc</id>
+	<name>Pandoc</name>
+	<summary>A document conversion conversion engine written in Haskell</summary>
+	<description>
+		<p>Pandoc is a document conversion engine written in Haskell. It can 
+			take many different formats and output many other formats.</p>
+		<p>Useful for writing in one favored format and converting into another
+			format that is readable by others. This may require the use of other
+			applications like LaTeX provided by TexLive or MikTex.</p>
+	</description>
+	<categories>
+		<catagory>Office</catagory>
+	</categories>
+	<url type="homepage">https://pandoc.org</url>
+	<metadata_license>CC0-1.0</metadata_license>
+</application>
