@@ -7,7 +7,7 @@ them on Fedora Silverblue, and also to reach a larger community.
 
 This repository has the build files required to package Pandoc in a Flatpak to
 be able to use the software where systems may not allow for OS packages like
-those using `ostree`. 
+those using `ostree`.
 
 ## Requirements
 
