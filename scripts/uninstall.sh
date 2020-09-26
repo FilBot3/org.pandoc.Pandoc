@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-cd src
+cd src || exit
 flatpak --user uninstall org.pandoc.Pandoc

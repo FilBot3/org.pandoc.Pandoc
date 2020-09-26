@@ -1,4 +1,4 @@
-# Pandoc in a Flapak!
+# Pandoc in a Flapak
 
 ## Overview
 
