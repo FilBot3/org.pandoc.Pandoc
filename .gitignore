@@ -10,7 +10,7 @@ ctags
 .flatpak-builder
 build-dir
 repo
-/app
+*.flatpak
 
 
 ## Visual Studio and Visual Sutdio Code files

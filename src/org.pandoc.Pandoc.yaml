@@ -13,7 +13,7 @@ modules:
       - type: script
         dest-filename: start.sh
         commands:
-          - exec /app/pandoc/bin/pandoc $@
+          - exec /app/bin/pandoc $@
       - type: file
         path: org.pandoc.Pandoc.appdata.xml
       - type: archive
@@ -22,8 +22,10 @@ modules:
         sha256: a3ab481ad53f5568d7ec5263fbdd3478fb320d13b5d61a92fb5cee410186bd86
     buildsystem: simple
     build-commands:
-      - mv pandoc /app/pandoc
+      - pwd
     post-install:
       - install -D -m 644 org.pandoc.Pandoc.appdata.xml /app/share/metainfo/org.pandoc.Pandoc.appdata.xml
       - install -D -m 755 start.sh /app/bin/start.sh
+      - install -m 755 bin/pandoc /app/bin/pandoc
+      - install -m 755 bin/pandoc-citeproc /app/bin/pandoc-citeproc
 ...
